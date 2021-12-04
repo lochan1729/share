@@ -27,9 +27,7 @@ public class Seatalgo {
 		//getManagers();
 		List<Bookmyoffice> result=getManagers();
 		for(Bookmyoffice bm:result) {
-			Query query = em.createNativeQuery("Select count(*) from bookmyoffice where manager_id=?",Bookmyoffice.class);
-			query.setParameter(1,id);
-			teams.add(new Teams(bm.getmanagerId(),query.getResultList()))
+			teams.add(new Teams(bm.getmanagerId(),teamsize()))
 		}
 		
 	}
