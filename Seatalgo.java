@@ -123,3 +123,7 @@ public class Seatalgo {
 		seatalgo.arrange();
 	}
 }
+
+Date date = new Date(new Date().getTime() + 86400000);  
+    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");  
+    String strDate= formatter.format(date); 
